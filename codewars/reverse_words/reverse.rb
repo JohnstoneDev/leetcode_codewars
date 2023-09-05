@@ -2,8 +2,7 @@ def ReverseWords str
 	words = str.split(" ")
 
 	words.each_with_index do |word, index|
-		reversed = word.reverse!
-		words[index] = reversed
+		words[index] = word.reverse!
 	end
 
 	return words.join(" ")
