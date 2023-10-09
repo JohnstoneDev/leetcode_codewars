@@ -11,6 +11,8 @@ func max (a, b int32) int32 {
 	return b
 }
 
+// function that flips a matrix to get the maximum sum of the elements in the
+// top left sub matrix
 func flippingMatrix(matrix [][]int32) int32 {
 	rows := len(matrix)
 	cols := len(matrix[0])
