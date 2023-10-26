@@ -15,14 +15,14 @@ type user struct {
 	number int
 }
 
-// function that confirms that a user doesn't have default values
-func checkNil (val user) bool {
+// User method that confirms that a user doesn't have default values
+func (val user) checkNil() bool {
 	return val.name != "" && val.number != 0
 }
 
 func canSendMessage(mToSend messageToSend) bool {
 	// check whether there are empty values in the message
-	return checkNil(mToSend.sender) && checkNil(mToSend.recipient)
+	return mToSend.recipient.checkNil() && mToSend.sender.checkNil()
 }
 
 // don't touch below this line
@@ -45,6 +45,13 @@ func test(mToSend messageToSend) {
 }
 
 func main() {
+	brenda :=  user{
+		name:   "Brenda Halafax",
+		number: 16545550987,
+	}
+
+	fmt.Println(brenda.checkNil())
+
 	test(messageToSend{
 		message: "you have an appointment tommorow",
 		sender: user{
