@@ -23,6 +23,7 @@ func alphanumeric(str string) bool {
 	return true
 }
 
+
 func main() {
 	fmt.Println(alphanumeric(""), "<= Expecting false")
 	fmt.Println(alphanumeric(".*?"), "<= Expecting false")

@@ -28,4 +28,4 @@ func FindMissingLetter(chars []rune) rune {
 func main(){
 	fmt.Println(FindMissingLetter([]rune{'a', 'b', 'c', 'd', 'f'}))
 	fmt.Println(FindMissingLetter([]rune{'O', 'Q', 'R', 'S'}))
-} 
+}
