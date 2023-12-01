@@ -11,13 +11,7 @@ func ToJadenCase(str string) string {
 
 	for i, word := range words {
 		letters := strings.Split(word, "")
-
-		for i, letter := range letters {
-			if i == 0 {
-				letters[i] = strings.ToUpper(letter)
-			}
-		}
-
+		letters[0] = strings.ToUpper(letters[0])
 		words[i] = strings.Join(letters, "")
 	}
 
